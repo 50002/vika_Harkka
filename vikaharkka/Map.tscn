@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://bi666ke4b2g4i"]
+[gd_scene load_steps=25 format=4 uid="uid://gxxqksuut1wq"]
 
 [ext_resource type="Texture2D" uid="uid://bfyla8b2kd0vo" path="res://Tiny Wonder Farm Free/Tiny Wonder Farm Free/tilemaps/farm inside free.png" id="1_8k2xl"]
 [ext_resource type="Texture2D" uid="uid://duihiqbef8p72" path="res://Tiny Wonder Farm Free/Tiny Wonder Farm Free/tilemaps/farm bridges free.png" id="2_cwhyn"]
@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dt7dqfhgmmy4j" path="res://Tiny Wonder Farm Free/Tiny Wonder Farm Free/objects&items/items free.png" id="5_lqcp4"]
 [ext_resource type="Texture2D" uid="uid://dv00htsehyxel" path="res://Tiny Wonder Farm Free/Tiny Wonder Farm Free/objects&items/furniture free.png" id="6_xod15"]
 [ext_resource type="Texture2D" uid="uid://kxnhbjeof4sb" path="res://Tiny Wonder Farm Free/Tiny Wonder Farm Free/objects&items/farm objects free.png" id="7_bfsik"]
-[ext_resource type="PackedScene" uid="uid://n24fa1ogoy0n" path="res://Player.tscn" id="8_77mvp"]
+[ext_resource type="PackedScene" path="res://Player.tscn" id="8_77mvp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b0cu6"]
 texture = ExtResource("1_8k2xl")

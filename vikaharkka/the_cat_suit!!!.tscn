@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsmgfjp7vn328"]
+
+[ext_resource type="Script" path="res://the_cat_suit!!!.gd" id="1_51d4b"]
+[ext_resource type="Texture2D" uid="uid://c0drbeue38aci" path="res://Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character/pixil-frame-0(5).png" id="2_rhjff"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y66yd"]
+
+[node name="The CatSuit!!!" type="Node2D"]
+script = ExtResource("1_51d4b")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_rhjff")
+region_rect = Rect2(0, 0, 192, 72)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_y66yd")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

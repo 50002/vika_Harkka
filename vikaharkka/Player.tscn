@@ -675,6 +675,7 @@ animation = &"attackL"
 autoplay = "idleR"
 
 [node name="Catsuit" type="AnimatedSprite2D" parent="CollisionShape2D"]
+visible = false
 position = Vector2(-0.5, -1)
 sprite_frames = SubResource("SpriteFrames_3ivmm")
 animation = &"walkR"

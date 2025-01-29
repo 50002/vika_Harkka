@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://gxxqksuut1wq"]
+[gd_scene load_steps=29 format=4 uid="uid://bi666ke4b2g4i"]
 
 [ext_resource type="Texture2D" uid="uid://bfyla8b2kd0vo" path="res://Tiny Wonder Farm Free/Tiny Wonder Farm Free/tilemaps/farm inside free.png" id="1_8k2xl"]
 [ext_resource type="Texture2D" uid="uid://duihiqbef8p72" path="res://Tiny Wonder Farm Free/Tiny Wonder Farm Free/tilemaps/farm bridges free.png" id="2_cwhyn"]
@@ -7,8 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://dt7dqfhgmmy4j" path="res://Tiny Wonder Farm Free/Tiny Wonder Farm Free/objects&items/items free.png" id="5_lqcp4"]
 [ext_resource type="Texture2D" uid="uid://dv00htsehyxel" path="res://Tiny Wonder Farm Free/Tiny Wonder Farm Free/objects&items/furniture free.png" id="6_xod15"]
 [ext_resource type="Texture2D" uid="uid://kxnhbjeof4sb" path="res://Tiny Wonder Farm Free/Tiny Wonder Farm Free/objects&items/farm objects free.png" id="7_bfsik"]
-[ext_resource type="PackedScene" path="res://Player.tscn" id="8_77mvp"]
-[ext_resource type="PackedScene" path="res://dashboots.tscn" id="9_7svgd"]
+[ext_resource type="PackedScene" uid="uid://n24fa1ogoy0n" path="res://Player.tscn" id="8_77mvp"]
+[ext_resource type="PackedScene" uid="uid://do7scaolhsd5a" path="res://dashboots.tscn" id="9_7svgd"]
+[ext_resource type="PackedScene" uid="uid://dsmgfjp7vn328" path="res://the_cat_suit!!!.tscn" id="10_lc506"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b0cu6"]
 texture = ExtResource("1_8k2xl")
@@ -1061,7 +1062,7 @@ size = Vector2(1941.5, 33.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nk6cl"]
 size = Vector2(34, 1127)
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_64ex2")
@@ -1115,3 +1116,6 @@ shape = SubResource("RectangleShape2D_nk6cl")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D3"]
 position = Vector2(-116, 178)
 shape = SubResource("RectangleShape2D_nk6cl")
+
+[node name="The CatSuit!!!" parent="." instance=ExtResource("10_lc506")]
+position = Vector2(1, -45)

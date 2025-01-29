@@ -1,4 +1,4 @@
-[gd_scene load_steps=90 format=3 uid="uid://n24fa1ogoy0n"]
+[gd_scene load_steps=91 format=3 uid="uid://n24fa1ogoy0n"]
 
 [ext_resource type="Script" path="res://character_body_2d.gd" id="1_heaa2"]
 [ext_resource type="Texture2D" uid="uid://dcxfcipseesfh" path="res://Tiny Wonder RPG Icons Pack FREE/Tiny Wonder RPG Icons Pack FREE/pixil-frame-0(3).png" id="2_54jc4"]
@@ -661,6 +661,10 @@ animations = [{
 "speed": 15.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t2gk6"]
+radius = 7.0
+height = 22.0
+
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_heaa2")
 
@@ -671,14 +675,14 @@ shape = SubResource("CapsuleShape2D_mya1r")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CollisionShape2D"]
 position = Vector2(-0.5, -1)
 sprite_frames = SubResource("SpriteFrames_jhl3w")
-animation = &"attackL"
+animation = &"deathR"
 autoplay = "idleR"
 
 [node name="Catsuit" type="AnimatedSprite2D" parent="CollisionShape2D"]
 visible = false
 position = Vector2(-0.5, -1)
 sprite_frames = SubResource("SpriteFrames_3ivmm")
-animation = &"walkR"
+animation = &"deathR"
 autoplay = "idleR"
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -688,4 +692,21 @@ zoom = Vector2(4, 4)
 wait_time = 3.0
 one_shot = true
 
+[node name="Hurtbox" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+shape = SubResource("CapsuleShape2D_t2gk6")
+
+[node name="iFrames" type="Timer" parent="."]
+one_shot = true
+
+[node name="dt" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
 [connection signal="timeout" from="DashCD" to="." method="_on_dash_cd_timeout"]
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
+[connection signal="timeout" from="iFrames" to="." method="_on_i_frames_timeout"]
+[connection signal="timeout" from="dt" to="." method="_on_dt_timeout"]

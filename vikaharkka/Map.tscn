@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://bi666ke4b2g4i"]
+[gd_scene load_steps=30 format=4 uid="uid://bi666ke4b2g4i"]
 
 [ext_resource type="Texture2D" uid="uid://bfyla8b2kd0vo" path="res://Tiny Wonder Farm Free/Tiny Wonder Farm Free/tilemaps/farm inside free.png" id="1_8k2xl"]
 [ext_resource type="Texture2D" uid="uid://duihiqbef8p72" path="res://Tiny Wonder Farm Free/Tiny Wonder Farm Free/tilemaps/farm bridges free.png" id="2_cwhyn"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://n24fa1ogoy0n" path="res://Player.tscn" id="8_77mvp"]
 [ext_resource type="PackedScene" uid="uid://do7scaolhsd5a" path="res://dashboots.tscn" id="9_7svgd"]
 [ext_resource type="PackedScene" uid="uid://dsmgfjp7vn328" path="res://the_cat_suit!!!.tscn" id="10_lc506"]
+[ext_resource type="PackedScene" uid="uid://b5ufsuu4fhieb" path="res://Mushroom_BLU.tscn" id="11_bc16x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b0cu6"]
 texture = ExtResource("1_8k2xl")
@@ -1108,6 +1109,7 @@ position = Vector2(174, -317)
 shape = SubResource("RectangleShape2D_4jn34")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(-1, 2)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
 position = Vector2(1636, 207)
@@ -1119,3 +1121,6 @@ shape = SubResource("RectangleShape2D_nk6cl")
 
 [node name="The CatSuit!!!" parent="." instance=ExtResource("10_lc506")]
 position = Vector2(1, -45)
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("11_bc16x")]
+position = Vector2(1, 220)

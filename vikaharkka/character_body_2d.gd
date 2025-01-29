@@ -14,6 +14,9 @@ var state := 0
 #state 3 = death
 #state 4 = movement
 #state 5 = Dash
+#state 8 = animation stopper
+@onready var i_frames: Timer = $iFrames
+@onready var dt: Timer = $dt
 
 @onready var capsule: CollisionShape2D = $CollisionShape2D
 @onready var animate: AnimatedSprite2D = $CollisionShape2D/AnimatedSprite2D
@@ -42,6 +45,7 @@ func _physics_process(delta: float) -> void:
 		elif state == 3:
 			animate.play("deathR")
 			catsuit.play("deathR")
+			state = 8
 		elif state == 4:
 			animate.play("walkR")
 			catsuit.play("walkR")
@@ -58,6 +62,7 @@ func _physics_process(delta: float) -> void:
 		elif state == 3:
 			animate.play("deathL")
 			catsuit.play("deathL")
+			state = 8
 		elif state == 4:
 			animate.play("walkL")
 			catsuit.play("walkL")
@@ -82,7 +87,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, 50.0)
 		velocity.y = move_toward(velocity.y, 0, SPEED)
-	if Input.is_anything_pressed() == false and state != 5:
+	if Input.is_anything_pressed() == false and state not in [2, 3, 5]:
 		state = 0
 	move_and_slide()
 	
@@ -90,3 +95,23 @@ func _physics_process(delta: float) -> void:
 
 func _on_dash_cd_timeout() -> void:
 	canDash = true
+
+
+func _on_hurtbox_area_entered(area: Area2D) -> void:
+	state = 2
+	Health -= 1
+	$Hurtbox/CollisionShape2D.disabled == true
+	if Health > 0:
+		i_frames.start()
+	else:
+		state = 3
+		dt.start()
+
+
+func _on_i_frames_timeout() -> void:
+	$Hurtbox/CollisionShape2D.disabled == true
+	state = 0
+
+
+func _on_dt_timeout() -> void:
+	get_tree().reload_current_scene()

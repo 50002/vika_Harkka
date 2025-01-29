@@ -349,8 +349,15 @@ shape = SubResource("CapsuleShape2D_mya1r")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CollisionShape2D"]
 position = Vector2(-0.5, -1)
 sprite_frames = SubResource("SpriteFrames_jhl3w")
-animation = &"idleL"
+animation = &"idleR"
 autoplay = "idleR"
+frame_progress = 0.771145
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)
+
+[node name="DashCD" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="timeout" from="DashCD" to="." method="_on_dash_cd_timeout"]

@@ -5,6 +5,7 @@ const SPEED = 150.0
 var RorL := 1
 # 0 = Left
 # 1 = Right
+var canDash := false
 var Health := 3
 var state := 0
 #State 0 = nothing
@@ -12,9 +13,11 @@ var state := 0
 #state 2 = hurt
 #state 3 = death
 #state 4 = movement
+#state 5 = Dash
 
 @onready var capsule: CollisionShape2D = $CollisionShape2D
 @onready var animate: AnimatedSprite2D = $CollisionShape2D/AnimatedSprite2D
+@onready var dash_cd: Timer = $DashCD
 
 
 func _physics_process(delta: float) -> void:
@@ -23,6 +26,8 @@ func _physics_process(delta: float) -> void:
 		RorL = 1
 	elif Input.is_action_pressed("ui_left"):
 		RorL = 0
+	
+	#Animation
 	if RorL == 1:
 		if state == 0:
 			animate.play("idleR")
@@ -51,17 +56,26 @@ func _physics_process(delta: float) -> void:
 		state = 1
 	elif state == 1:
 		state = 0
-	
+		
 	var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	var direction := (Vector2(input_dir.x,  input_dir.y)).normalized()
 	if direction and state not in  [1, 2, 3]:
 		state = 4
-		velocity.x = direction.x * SPEED
-		velocity.y = direction.y * SPEED
+		velocity.x = move_toward(velocity.x, direction.x*SPEED, (delta*SPEED)*10)
+		velocity.y =  move_toward(velocity.y, direction.y*SPEED, (delta*SPEED)*10)
+		if Input.is_action_pressed("Dash") and canDash == true:
+			dash_cd.start()
+			velocity.x = direction.x * SPEED * 5.0
+			velocity.y = direction.y * SPEED * 5.0
+			canDash = false
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity.x = move_toward(velocity.x, 0, 50.0)
 		velocity.y = move_toward(velocity.y, 0, SPEED)
-	if Input.is_anything_pressed() == false:
+	if Input.is_anything_pressed() == false and state != 5:
 		state = 0
 	move_and_slide()
 	
+
+
+func _on_dash_cd_timeout() -> void:
+	canDash = true

@@ -18,6 +18,7 @@ var state := 0
 @onready var capsule: CollisionShape2D = $CollisionShape2D
 @onready var animate: AnimatedSprite2D = $CollisionShape2D/AnimatedSprite2D
 @onready var dash_cd: Timer = $DashCD
+@onready var catsuit: AnimatedSprite2D = $CollisionShape2D/Catsuit
 
 
 func _physics_process(delta: float) -> void:
@@ -31,25 +32,35 @@ func _physics_process(delta: float) -> void:
 	if RorL == 1:
 		if state == 0:
 			animate.play("idleR")
+			catsuit.play("idleR")
 		elif state == 1:
 			animate.play("attackR")
+			catsuit.play("attackR")
 		elif state == 2:
 			animate.play("hurt")
+			catsuit.play("hurt")
 		elif state == 3:
 			animate.play("deathR")
+			catsuit.play("deathR")
 		elif state == 4:
 			animate.play("walkR")
+			catsuit.play("walkR")
 	else:
 		if state == 0:
 			animate.play("idleL")
+			catsuit.play("idleL")
 		elif state == 1:
 			animate.play("attackL")
+			catsuit.play("attackL")
 		elif state == 2:
 			animate.play("hurt")
+			catsuit.play("hurt")
 		elif state == 3:
 			animate.play("deathL")
+			catsuit.play("deathL")
 		elif state == 4:
 			animate.play("walkL")
+			catsuit.play("walkL")
 
 	
 	if Input.is_action_pressed("Attack"):

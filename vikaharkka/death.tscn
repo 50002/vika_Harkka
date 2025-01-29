@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://55l6l5u7a53e"]
+
+[ext_resource type="Texture2D" uid="uid://bsgftlp35f670" path="res://Tiny Wonder UI Free/Tiny Wonder UI Free/Skill issue.png" id="1_q2cq5"]
+[ext_resource type="Script" path="res://death.gd" id="1_wjihd"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wjihd")
+
+[node name="SkillIssue" type="Sprite2D" parent="."]
+position = Vector2(568, 358)
+scale = Vector2(1.5498, 1.40418)
+texture = ExtResource("1_q2cq5")
+
+[node name="again" type="Button" parent="."]
+layout_mode = 0
+offset_left = 502.0
+offset_top = 421.0
+offset_right = 613.0
+offset_bottom = 452.0
+text = "TRY AGAIN"
+
+[node name="pussy" type="Button" parent="."]
+layout_mode = 0
+offset_left = 467.0
+offset_top = 477.0
+offset_right = 658.0
+offset_bottom = 508.0
+text = "BACK TO START SCREEN"
+
+[connection signal="pressed" from="again" to="." method="_on_again_pressed"]
+[connection signal="pressed" from="pussy" to="." method="_on_pussy_pressed"]

@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8rdst7d342kc"]
+
+[ext_resource type="Script" path="res://win.gd" id="1_3pv5x"]
+[ext_resource type="Texture2D" uid="uid://bibw82oby6rje" path="res://Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character/portrait cat kigurumi.png" id="2_d0f3n"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3pv5x")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.427451, 0.752941, 0.32549, 1)
+
+[node name="PortraitCatKigurumi" type="Sprite2D" parent="."]
+position = Vector2(566, 553)
+scale = Vector2(2.90625, 2.9375)
+texture = ExtResource("2_d0f3n")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 526.0
+offset_top = 210.0
+offset_right = 608.0
+offset_bottom = 236.0
+text = "YOU WIN"
+fit_content = true
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 469.0
+offset_top = 259.0
+offset_right = 660.0
+offset_bottom = 290.0
+text = "BACK TO START SCREEN"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,129 @@
+[gd_scene load_steps=26 format=3 uid="uid://d2qseeegl4gc1"]
+
+[ext_resource type="Texture2D" uid="uid://d2j7gj51tq424" path="res://Tiny Wonder Farm Free/Tiny Wonder Farm Free/characters/main character/portrait female.png" id="1_r7b2c"]
+[ext_resource type="Texture2D" uid="uid://bj6ii13rekycr" path="res://Tiny Wonder Farm Free/Tiny Wonder Farm Free/characters/main character old/portrait female.png" id="2_yu5tq"]
+[ext_resource type="Texture2D" uid="uid://gcpixtoc2q18" path="res://Tiny Wonder Farm Free/Tiny Wonder Farm Free/characters/main character/portrait male.png" id="3_llmcs"]
+[ext_resource type="Texture2D" uid="uid://tdjv0dsd2gsr" path="res://Tiny Wonder Farm Free/Tiny Wonder Farm Free/characters/main character old/portrait male.png" id="4_xth4l"]
+[ext_resource type="Texture2D" uid="uid://dvxuhci3mwr80" path="res://Tiny Wonder Farm Free/Tiny Wonder Farm Free/characters/main character/walk and idle.png" id="5_bdnt7"]
+[ext_resource type="Texture2D" uid="uid://bsagbyif5wpnw" path="res://Tiny Wonder Farm Free/Tiny Wonder Farm Free/characters/main character old/walk and idle.png" id="6_psboy"]
+[ext_resource type="Texture2D" uid="uid://dabyuopig6k7u" path="res://Tiny Wonder RPG Icons Pack FREE/Tiny Wonder RPG Icons Pack FREE/free preview.png" id="7_u4y4m"]
+[ext_resource type="Texture2D" uid="uid://cphdsd0nvftad" path="res://Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character/cat kigurumi attack and die.png" id="8_3ink3"]
+[ext_resource type="Texture2D" uid="uid://cgo3ig6mtqr38" path="res://Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character/cat kigurumi walk and idle.png" id="9_ctkdf"]
+[ext_resource type="Texture2D" uid="uid://bibw82oby6rje" path="res://Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character/portrait cat kigurumi.png" id="10_skekw"]
+[ext_resource type="Texture2D" uid="uid://d00x1ec5840js" path="res://Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character/sword.png" id="11_furpw"]
+[ext_resource type="Texture2D" uid="uid://c6eelj4e4u3hf" path="res://Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character/walk and idle.png" id="12_j6m5i"]
+[ext_resource type="Texture2D" uid="uid://bjuqua0nielxu" path="res://Tiny Wonder UI Free/Tiny Wonder UI Free/bars free.png" id="13_xbtvg"]
+[ext_resource type="Texture2D" uid="uid://drivl1y8hq266" path="res://Tiny Wonder UI Free/Tiny Wonder UI Free/base free.png" id="14_5umf3"]
+[ext_resource type="Texture2D" uid="uid://bynj8j61bi4nh" path="res://Tiny Wonder UI Free/Tiny Wonder UI Free/buttons free.png" id="15_n62fw"]
+[ext_resource type="Texture2D" uid="uid://bjo50yg6njicn" path="res://Tiny Wonder UI Free/Tiny Wonder UI Free/gui_free.png" id="16_h1qws"]
+[ext_resource type="Texture2D" uid="uid://brs05lsb5a0cc" path="res://Tiny Wonder UI Free/Tiny Wonder UI Free/icons free.png" id="17_j5xlm"]
+[ext_resource type="Texture2D" uid="uid://by1b7ymnp64tg" path="res://Tiny Wonder UI Free/Tiny Wonder UI Free/scrollbars free.png" id="18_jhw6f"]
+[ext_resource type="Texture2D" uid="uid://c8sfudjx3r5pu" path="res://Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/tilemaps/autumn tilemap.png" id="19_t0s6n"]
+[ext_resource type="Texture2D" uid="uid://vtnv60ru528j" path="res://Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/tilemaps/bridges.png" id="20_pctar"]
+[ext_resource type="Texture2D" uid="uid://c06mludemhe11" path="res://Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/tilemaps/inside.png" id="21_sar8u"]
+[ext_resource type="Texture2D" uid="uid://b5f6l24v7w05g" path="res://Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/tilemaps/spring tilemap.png" id="22_608gp"]
+[ext_resource type="Texture2D" uid="uid://bx1m4lvj155w6" path="res://Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/tilemaps/summer tilemap.png" id="23_dcvpc"]
+[ext_resource type="Texture2D" uid="uid://dvs2i6f154mu1" path="res://Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/tilemaps/winter outside.png" id="24_tp5p2"]
+[ext_resource type="Texture2D" uid="uid://cj5vjdc85rqlr" path="res://Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character/portrait female.png" id="25_n2jnh"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="PortraitFemale" type="Sprite2D" parent="."]
+position = Vector2(174, 365)
+texture = ExtResource("1_r7b2c")
+
+[node name="PortraitFemale2" type="Sprite2D" parent="."]
+position = Vector2(275, 364)
+texture = ExtResource("2_yu5tq")
+
+[node name="PortraitMale" type="Sprite2D" parent="."]
+position = Vector2(147, 462)
+texture = ExtResource("3_llmcs")
+
+[node name="PortraitMale2" type="Sprite2D" parent="."]
+position = Vector2(275, 460)
+texture = ExtResource("4_xth4l")
+
+[node name="WalkAndIdle" type="Sprite2D" parent="."]
+position = Vector2(201, 278)
+texture = ExtResource("5_bdnt7")
+
+[node name="WalkAndIdle2" type="Sprite2D" parent="."]
+position = Vector2(450, 424)
+texture = ExtResource("6_psboy")
+
+[node name="FreePreview" type="Sprite2D" parent="."]
+position = Vector2(404, 319)
+texture = ExtResource("7_u4y4m")
+
+[node name="CatKigurumiAttackAndDie" type="Sprite2D" parent="."]
+position = Vector2(392, 511)
+texture = ExtResource("8_3ink3")
+
+[node name="CatKigurumiWalkAndIdle" type="Sprite2D" parent="."]
+position = Vector2(158, 526)
+texture = ExtResource("9_ctkdf")
+
+[node name="PortraitCatKigurumi" type="Sprite2D" parent="."]
+position = Vector2(68, 376)
+texture = ExtResource("10_skekw")
+
+[node name="Sword" type="Sprite2D" parent="."]
+position = Vector2(357, 242)
+texture = ExtResource("11_furpw")
+
+[node name="WalkAndIdle3" type="Sprite2D" parent="."]
+position = Vector2(486, 234)
+texture = ExtResource("12_j6m5i")
+
+[node name="BarsFree" type="Sprite2D" parent="."]
+position = Vector2(254, 223)
+texture = ExtResource("13_xbtvg")
+
+[node name="BaseFree" type="Sprite2D" parent="."]
+position = Vector2(669, 331)
+texture = ExtResource("14_5umf3")
+
+[node name="ButtonsFree" type="Sprite2D" parent="."]
+position = Vector2(724, 472)
+texture = ExtResource("15_n62fw")
+
+[node name="GuiFree" type="Sprite2D" parent="."]
+position = Vector2(757, 331)
+texture = ExtResource("16_h1qws")
+
+[node name="IconsFree" type="Sprite2D" parent="."]
+position = Vector2(534, 532)
+texture = ExtResource("17_j5xlm")
+
+[node name="ScrollbarsFree" type="Sprite2D" parent="."]
+position = Vector2(634, 576)
+texture = ExtResource("18_jhw6f")
+
+[node name="AutumnTilemap" type="Sprite2D" parent="."]
+position = Vector2(113, 102)
+texture = ExtResource("19_t0s6n")
+
+[node name="Bridges" type="Sprite2D" parent="."]
+position = Vector2(326, 16)
+texture = ExtResource("20_pctar")
+
+[node name="Inside" type="Sprite2D" parent="."]
+position = Vector2(518, 84)
+texture = ExtResource("21_sar8u")
+
+[node name="SpringTilemap" type="Sprite2D" parent="."]
+position = Vector2(698, 123)
+texture = ExtResource("22_608gp")
+
+[node name="SummerTilemap" type="Sprite2D" parent="."]
+position = Vector2(878, 98)
+texture = ExtResource("23_dcvpc")
+
+[node name="WinterOutside" type="Sprite2D" parent="."]
+position = Vector2(1049, 326)
+texture = ExtResource("24_tp5p2")
+
+[node name="PortraitFemale3" type="Sprite2D" parent="."]
+position = Vector2(220, 362)
+texture = ExtResource("25_n2jnh")

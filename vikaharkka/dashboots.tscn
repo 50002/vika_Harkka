@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://do7scaolhsd5a"]
+
+[ext_resource type="Script" path="res://dashboots.gd" id="1_mm38d"]
+[ext_resource type="Texture2D" uid="uid://bg8757xh55rv8" path="res://Tiny Wonder RPG Icons Pack FREE/Tiny Wonder RPG Icons Pack FREE/Icons_fixwdSpacing.png" id="2_321se"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rmrs2"]
+
+[node name="Dashboots" type="Node2D"]
+script = ExtResource("1_mm38d")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_321se")
+region_enabled = true
+region_rect = Rect2(56.2593, 73.5176, 16.1125, 16.0448)
+region_filter_clip_enabled = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_rmrs2")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

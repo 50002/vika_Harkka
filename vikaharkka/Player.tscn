@@ -351,7 +351,7 @@ position = Vector2(-0.5, -1)
 sprite_frames = SubResource("SpriteFrames_jhl3w")
 animation = &"idleR"
 autoplay = "idleR"
-frame_progress = 0.771145
+frame_progress = 0.283597
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)

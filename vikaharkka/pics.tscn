@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://d2qseeegl4gc1"]
+[gd_scene load_steps=31 format=3 uid="uid://d2qseeegl4gc1"]
 
 [ext_resource type="Texture2D" uid="uid://d2j7gj51tq424" path="res://Tiny Wonder Farm Free/Tiny Wonder Farm Free/characters/main character/portrait female.png" id="1_r7b2c"]
 [ext_resource type="Texture2D" uid="uid://bj6ii13rekycr" path="res://Tiny Wonder Farm Free/Tiny Wonder Farm Free/characters/main character old/portrait female.png" id="2_yu5tq"]
@@ -25,6 +25,11 @@
 [ext_resource type="Texture2D" uid="uid://bx1m4lvj155w6" path="res://Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/tilemaps/summer tilemap.png" id="23_dcvpc"]
 [ext_resource type="Texture2D" uid="uid://dvs2i6f154mu1" path="res://Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/tilemaps/winter outside.png" id="24_tp5p2"]
 [ext_resource type="Texture2D" uid="uid://cj5vjdc85rqlr" path="res://Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character/portrait female.png" id="25_n2jnh"]
+[ext_resource type="PackedScene" uid="uid://n24fa1ogoy0n" path="res://Player.tscn" id="26_e2efc"]
+[ext_resource type="Texture2D" uid="uid://djii8asskn7mw" path="res://Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/items&objects/winter items.png" id="27_aexa1"]
+[ext_resource type="Texture2D" uid="uid://bh50y0sw8uy84" path="res://Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/items&objects/summer and spring items.png" id="28_qvgx8"]
+[ext_resource type="Texture2D" uid="uid://7e2rf3r84cw7" path="res://Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/items&objects/furniture.png" id="29_hjv1w"]
+[ext_resource type="Texture2D" uid="uid://bk6fj0d3yd4gr" path="res://Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/items&objects/autumn items.png" id="30_wpvmt"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -127,3 +132,25 @@ texture = ExtResource("24_tp5p2")
 [node name="PortraitFemale3" type="Sprite2D" parent="."]
 position = Vector2(220, 362)
 texture = ExtResource("25_n2jnh")
+
+[node name="CharacterBody2D" parent="PortraitFemale3" instance=ExtResource("26_e2efc")]
+
+[node name="WinterItems" type="Sprite2D" parent="PortraitFemale3"]
+position = Vector2(1001, 411)
+texture = ExtResource("27_aexa1")
+
+[node name="SummerAndSpringItems" type="Sprite2D" parent="PortraitFemale3"]
+position = Vector2(458, 481)
+texture = ExtResource("28_qvgx8")
+
+[node name="Furniture" type="Sprite2D" parent="PortraitFemale3"]
+position = Vector2(1233, 375)
+texture = ExtResource("29_hjv1w")
+
+[node name="AutumnItems" type="Sprite2D" parent="PortraitFemale3"]
+position = Vector2(1159, 122)
+texture = ExtResource("30_wpvmt")
+
+[node name="FreePreview" type="Sprite2D" parent="PortraitFemale3"]
+position = Vector2(657, 177)
+texture = ExtResource("7_u4y4m")
